@@ -33,11 +33,32 @@ nav a {
   font-weight: bold;
   color: #333;
 }
+/* بخش پروژه ها */
+.projects-section {
+  padding: 30px 0;
+  text-align: center;
+}
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    2,
+    1fr
+  ); /* 2 sotoone ham andaze. 1fr andaze sotoone 2 ham tekrar sotoon, yani 2 sotoone 1fr besaz. */
+  gap: 20px;
+}
+.project-card {
+  background-color: #f0f0f0;
+  padding: 40px 20px;
+  border-radius: 8px;
+}
 /* استایل واکنشگرا روی موبایل  */
 
 /* صفحات کوچکتر یا مساوی  600 پیکسل */
 @media (max-width: 600px) {
   nav {
     flex-direction: column;
+  }
+  .projects-grid {
+    grid-template-columns: 1fr;
   }
 }
