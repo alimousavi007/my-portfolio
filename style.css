@@ -75,6 +75,13 @@ nav a {
   padding: 40px 20px;
   border-radius: 8px;
 }
+.project-description {
+  display: none; /* مخفی کردن توضیحات به صورت پیش‌فرض */
+}
+
+.project-card.open .project-description {
+  display: block; /* نمایش توضیحات وقتی کارت کلاس open را دارد */
+}
 /* استایل واکنشگرا روی موبایل  */
 
 /* صفحات کوچکتر یا مساوی  600 پیکسل */

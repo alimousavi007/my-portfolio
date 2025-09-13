@@ -11,3 +11,17 @@ allProjectsCard.forEach(card =>{
         console.log('You clicked on project: ' + card.textContent);
     });
 });
+
+// ۱. تمام دکمه‌های "نمایش جزئیات" را انتخاب کن
+const detailButtons = document.querySelectorAll('.toggle-details-btn');
+
+// ۲. برای هر دکمه یک شنونده رویداد اضافه کن
+detailButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    // ۳. نزدیک‌ترین والد با کلاس 'project-card' را پیدا کن
+    const card = button.closest('.project-card');
+
+    // ۴. کلاس 'open' را به آن کارت اضافه یا حذف کن
+    card.classList.toggle('open');
+  });
+});
