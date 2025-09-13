@@ -2,25 +2,49 @@
 * {
   box-sizing: border-box;
 }
+/* تعریف متغیرهای رنگی */
+:root {
+  --bg-color: #ffffff; /* رنگ پس‌زمینه روشن */
+  --text-color: #333333; /* رنگ متن تیره */
+  --secondary-bg-color: #f0f0f0; /* رنگ پس‌زمینه دوم */
+}
+
+/* تعریف استایل‌ها برای حالت تاریک */
+body.dark-mode {
+  --bg-color: #333333;
+  --text-color: #f0f0f0;
+  --secondary-bg-color: #555555;
+}
+
+/* استفاده از متغیرها در بدنه و سایر عناصر */
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: sans-serif;
   margin: 0;
+  background-color: var(--bg-color); /* استفاده از متغیر */
+  color: var(--text-color); /* استفاده از متغیر */
   direction: rtl;
 }
+
+header,
+.project-card {
+  background-color: var(--secondary-bg-color);
+}
+
+footer {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 15px;
+  text-align: center;
+}
+
 header {
-  background-color: #f0f0f0;
   padding: 20px;
   text-align: center;
 }
 main {
   padding: 30px;
 }
-footer {
-  background-color: #333;
-  color: white;
-  padding: 15px;
-  text-align: center;
-}
+
 /* منو */
 nav {
   display: flex;
@@ -31,7 +55,7 @@ nav {
 nav a {
   text-decoration: none;
   font-weight: bold;
-  color: #333;
+  color: var(--text-color);
 }
 /* بخش پروژه ها */
 .projects-section {
@@ -47,7 +71,7 @@ nav a {
   gap: 20px;
 }
 .project-card {
-  background-color: #f0f0f0;
+  background-color: var(--secondary-bg-color);
   padding: 40px 20px;
   border-radius: 8px;
 }
