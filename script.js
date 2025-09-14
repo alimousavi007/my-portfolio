@@ -25,3 +25,17 @@ detailButtons.forEach(button => {
     card.classList.toggle('open');
   });
 });
+const skillForm = document.querySelector("#add-skill-form");
+const skillInput = document.querySelector("#skill-input");
+const skillList = document.querySelector("#skill-list");
+
+skillForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const newSkill = skillInput.value.trim();
+  if (newSkill) {
+    const li = document.createElement("li");
+    li.textContent = newSkill;
+    skillList.appendChild(li);
+    skillInput.value = "";
+  }
+});

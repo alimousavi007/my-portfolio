@@ -14,8 +14,8 @@
         <a href="#">درباره من</a>
         <a href="#">پروژه‌ها</a>
         <a href="#">تماس با من</a>
+        <button id="dark-mode-toggle">🌙</button>
       </nav>
-      <button id="dark-mode-toggle">toggle dark mode</button>
     </header>
     <main>
       <section>
@@ -24,6 +24,19 @@
           سلام میخوایم طی یک دوره فشرده 1 ماهه، از هیچی نابلد به سنیور فرانت اند
           دولوپر برسیم.
         </p>
+      </section>
+      <section>
+        <h3>مهارت‌ها</h3>
+        <form id="add-skill-form">
+          <input
+            type="text"
+            id="skill-input"
+            placeholder="یک مهارت جدید وارد کنید"
+            required
+          />
+          <button type="submit">افزودن</button>
+        </form>
+        <ul id="skill-list"></ul>
       </section>
       <section class="projects-section">
         <h2>پروژه‌های من</h2>
